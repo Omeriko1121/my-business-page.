@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="az">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sənin Biznesin — Sadə Landing Page</title>
+    <meta name="description" content="Sənin biznesini təqdim edən sadə və təsirli bir səhifə. Kontakt, xidmət və WhatsApp düyməsi daxil." />
+
+    <style>
+        :root{
+          --bg:#0f1724; /* dark navy */
+          --card:#0b1220;
+          --accent:#0ea5a0; /* teal */
+          --muted:#9aa4b2;
+          --text:#e6eef6;
+          --radius:16px;
+          font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:linear-gradient(180deg,#071122 0%, #0f1724 100%);color:var(--text);min-height:100vh}
+        .wrap{max-width:1000px;margin:40px auto;padding:24px}
+
+        header{display:flex;align-items:center;justify-content:space-between}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#055e5b);display:flex;align-items:center;justify-content:center;font-weight:700}
+        .brand h1{font-size:18px;margin:0}
+        .brand p{margin:0;color:var(--muted);font-size:13px}
+
+        .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+        .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,.6)}
+
+        .intro h2{margin:0 0 8px 0;font-size:28px}
+        .intro p{color:var(--muted);line-height:1.5}
+
+        .cta{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+        .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:var(--accent);color:#022; font-weight:700;text-decoration:none}
+        .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--text);font-weight:600}
+
+        .right .meta{display:flex;flex-direction:column;gap:12px}
+        .meta .phone{font-weight:700}
+        .meta .small{color:var(--muted);font-size:13px}
+
+        .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+        .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px}
+        .feature h4{margin:0 0 6px 0}
+        .feature p{margin:0;color:var(--muted);font-size:13px}
+
+        footer{margin-top:28px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+
+        /* responsive */
+        @media (max-width:900px){
+          .hero{grid-template-columns:1fr;}
+          .right{order:-1}
+          .features{grid-template-columns:repeat(2,1fr)}
+        }
+        @media (max-width:520px){
+          .features{grid-template-columns:1fr}
+          .brand h1{font-size:16px}
+          .intro h2{font-size:20px}
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="brand">
+            <div class="logo">SB</div>
+            <div>
+                <h1>Sənin Biznesin</h1>
+                <p>Sadə, təmiz və etibarlı xidmət</p>
+            </div>
+        </div>
+        <nav>
+            <a class="btn secondary" href="#contact">Əlaqə</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="card intro">
+            <h2>Peşəkar xidmətlər — sürətlə və etibarlı</h2>
+            <p>Bu səhifə sənə WhatsApp Business inteqrasiyası üçün lazımlı "görünüş" verir: müştərilər üçün kontakt, qısa təqdimat və birbaşa WhatsApp düyməsi.
+            </p>
+
+            <div class="cta">
+                <!-- Replace the number below with your client number in +994 format if needed -->
+                <a class="btn" href="https://wa.me/994517487796?text=Salam%20%%20şəxsi%20tələbat" target="_blank" rel="noopener">WhatsApp ilə əlaqə</a>
+                <a class="btn secondary" href="#about">Daha çox</a>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h4>WhatsApp hazır</h4>
+                    <p>Bir kliklə müştəri ilə söhbətə başla. (wa.me linki istifadə olunur)</p>
+                </div>
+                <div class="feature">
+                    <h4>Profesional</h4>
+                    <p>Sadə və etibarlı dizayn — mobil və desktop üçün optimallaşdırılmışdır.</p>
+                </div>
+                <div class="feature">
+                    <h4>Tez yerləşdirmə</h4>
+                    <p>Bu faylı birbaşa `index.html` kimi saxlayıb hosting-ə yüklə.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="card right">
+            <div class="meta">
+                <div>
+                    <div class="small">Biznes nömrə (From)</div>
+                    <div class="phone">+1 555 178 0516</div>
+                </div>
+                <div>
+                    <div class="small">Phone Number ID</div>
+                    <div class="phone">788825900970753</div>
+                </div>
+                <div id="contact">
+                    <div class="small">Müştəriyə göndərmək üçün (To)</div>
+                    <div class="phone">+994 51 748 77 96</div>
+                </div>
+
+                <div style="margin-top:10px;color:var(--muted);font-size:13px">
+                    Əlavə etmək və ya dəyişdirmək üçün faylı redaktə et. wa.me linkində `994517487796` yerinə öz nömrəni qoy.
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <section class="card" style="margin-top:20px" id="about">
+        <h3>Haqqımızda</h3>
+        <p style="color:var(--muted)">Qısa təsvir: Sən burada biznesin adını, nə xidmət etdiyini və iş saatlarını yazacaqsan. Bu sadə səhifə müştəriləri inandırmaq üçün kifayət edir.</p>
+
+        <div style="display:flex;gap:16px;margin-top:12px;flex-wrap:wrap">
+            <div style="min-width:200px">
+                <strong>Xidmət 1</strong>
+                <p style="color:var(--muted);margin:6px 0">Qısa açıqlama.</p>
+            </div>
+            <div style="min-width:200px">
+                <strong>Xidmət 2</strong>
+                <p style="color:var(--muted);margin:6px 0">Qısa açıqlama.</p>
+            </div>
+            <div style="min-width:200px">
+                <strong>Xidmət 3</strong>
+                <p style="color:var(--muted);margin:6px 0">Qısa açıqlama.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>© "Sənin Biznesin" — Bütün hüquqlar qorunur.</div>
+        <div style="color:var(--muted);font-size:13px">Dizayn: Sadə Landing · Hosting üçün GitHub Pages / Netlify istifadə et</div>
+    </footer>
+</div>
+</body>
+</html>
